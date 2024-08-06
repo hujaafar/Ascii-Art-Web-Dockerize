@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII-ART-WEB-STYLIZE</title>
+    <link rel="stylesheet" type="text/css" href="/statics/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header title">
+            <div class="logo">
+                <h1 class="title">ASCII-ART Generator</h1>
+            </div>
+        </header>
+
+        <form action="/ascii-art" method="POST" class="fact-form">
+            <textarea id="inputText" name="text" placeholder="Enter Text to be converted" maxlength="250" required></textarea>
+            <select id="asciiType" name="format">
+                <option value="standard">Standard</option>
+                <option value="shadow">Shadow</option>
+                <option value="thinkertoy">Thinkertoy</option>
+            </select>
+            <input type="submit" class="btn btn-large" value="Submit">
+        </form>
+
+        <div class="wrapper">
+            <h2 class="title">Output</h2>
+            <br>
+            <textarea id="outputText" readonly>{{.OutputText}}</textarea>
+            <br>
+            <form method="POST" action="/export">
+                <input type="hidden" name="output" value="{{.OutputText}}">
+                <button type="submit" name="format" value="txt" class="btn btn-large export-btn" {{if eq .OutputText ""}}disabled{{end}}>TXT</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

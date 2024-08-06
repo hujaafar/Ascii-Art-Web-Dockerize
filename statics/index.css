@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #292524;
+    color: #fafaf9;
+    padding: 48px 64px;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+
+h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    font-family: "Coiny", sans-serif;
+    line-height: 1;
+    margin: 6px;
+    text-align: center; /* Center the text */
+}
+
+.btn  {
+    border: none;
+    font-family: "Coiny", sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 16px 0 13px;
+    background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+    color: inherit;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+    font-size: 30px;
+    padding: 20px 32px 17px;
+}
+
+.fact-form {
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+}
+
+.fact-form textarea {
+    width: 100%;
+    background-color: #78716c;
+    border: none;
+    border-radius: 16px;
+    padding: 16px;
+    color: inherit;
+    font-family: inherit;
+    resize: none; /* Disable resizing */
+}
+
+.fact-form textarea::placeholder {
+    color: #fff; /* Change the color to white */
+}
+
+.fact-form select {
+    width: 250px;
+    background-color: #78716c;
+    border: none;
+    border-radius: 100px;
+    padding: 16px;
+    color: inherit;
+    font-family: inherit;
+}
+
+.fact-form input:first-child {
+    flex-grow: 1;
+}
+
+.fact-form span {
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+@media (max-width: 1000px) {
+    body {
+        padding: 32px 48px;
+    }
+
+    .fact-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .fact-form input,
+    .fact-form select {
+        width: auto;
+    }
+}
+
+.wrapper {
+    margin-bottom: 40px;
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper h2 {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+}
+
+.wrapper textarea {
+    width: 100%; /* Change fixed width to 100% */
+    max-width: 100%; /* Set maximum width to 100% */
+    padding: 16px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    border: 2px solid #bfbfbf;
+    border-radius: 16px;
+    background-color: #44403c;
+    color: #fafaf9;
+    height: 330px; /* Set initial height */
+    max-height: 500px; /* Increase the maximum height */
+    margin-top: 20px; /* Add space between the button and the textarea */
+}
+
+.wrapper textarea:focus {
+    border-color: #4671EA;
+}
+
+.wrapper textarea::-webkit-scrollbar {
+    width: 0px;
+}
+
+@media (max-width: 1000px) {
+    .wrapper {
+        padding: 16px 16px;
+    }
+    .wrapper textarea {
+        width: auto;
+    }
+}
+
+textarea {
+    overflow: auto; /* Only apply overflow to the second textarea */
+    box-sizing: border-box;
+    white-space: pre;
+    color: #fff;
+}
+
+.export-btn {
+    margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+    .wrapper textarea {
+        width: calc(100% - 32px); /* Adjust width to fit within the container with padding */
+    }
+}
+
+.title {
+    font-family: "Poetsen One"
+}
